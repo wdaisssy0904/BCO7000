@@ -1,0 +1,42 @@
+---
+title: "Assessment 1"
+author: "zheng WANG S8069479"
+date: "2023-03-09"
+output: html_document
+---
+
+# RMarkdown editing
+**R Markdown is a file format for making dynamic documents with R. An R Markdown document is written in markdown (an easy-to-write plain text format) and contains chunks of embedded R code.**
+**Some of the advantages of using R markdown include:**
+*1.Explicitly links your data with your R code and output creating a fully reproducible workflow.*
+*2.You can create a wide variety of output formats*
+*3.Increases the efficiency of your workflow*
+
+-[Rmarkdown](https://rmarkdown.rstudio.com/lesson-8.html)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+fastfood <- read_csv("fastfood_calories.csv")
+
+```
+# prints out the firsts 10 rows of the dataset
+
+```{r kable}
+library(readr)
+library(knitr)
+fastfood<- read_csv("fastfood_calories.csv")
+head(fastfood,10,"simple")
+
+```
+# prints out the first 10 rows and the first 5 variables
+```{r kable2}
+library(readr)
+library(knitr)
+fastfood<- read_csv("fastfood_calories.csv")
+knitr::kable(fastfood[1:10,1:5],align="lcccc")
+
+```
+
+
+
